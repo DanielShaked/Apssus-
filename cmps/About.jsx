@@ -2,7 +2,7 @@ export function About() {
   return (
     <React.Fragment>
       <div className="about">
-        <img src="../assets/img/yuval.jpg" alt="" />
+        <img src="./assets/img/yuval.jpg" alt="" />
         <div className="about-content">
           <h3>Yuval Shai</h3>
           <p>
@@ -11,7 +11,7 @@ export function About() {
           </p>
         </div>
         <div className="social">
-          <a target="_blank" href="https://www.instagram.com/yuval_shai1/" className="fab fa-instagram"></a>
+        <a target="_blank" href="https://github.com/yuvalshai95" className="fab fa-github"></a>
           <a target="_blank" href="https://www.facebook.com/yuva.shai2/" className="fab fa-facebook-f"></a>
           <a target="_blank" href="https://www.linkedin.com/in/yuval-shai/" className="fab fa-linkedin"></a>
         </div>
@@ -19,13 +19,13 @@ export function About() {
       <div className="about">
         <img src="" alt="" />
         <div className="about-content">
-          <h3>name-1</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <h3>Daniel Shaked</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, commodi.</p>
         </div>
         <div className="social">
-          <a target="_blank" href="https://www.instagram.com/yuval_shai1/" className="fab fa-instagram"></a>
-          <a target="_blank" href="https://www.facebook.com/yuva.shai2/" className="fab fa-facebook-f"></a>
-          <a target="_blank" href="https://www.linkedin.com/in/yuval-shai/" className="fab fa-linkedin"></a>
+          <a target="_blank" href="https://github.com/DanielShaked" className="fab fa-github"></a>
+          <a target="_blank" href="https://www.facebook.com/daniel.shkad" className="fab fa-facebook-f"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/daniel-shaked-bba564203/" className="fab fa-linkedin"></a>
         </div>
       </div>
     </React.Fragment>
