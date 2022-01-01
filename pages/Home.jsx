@@ -10,8 +10,8 @@ export function Home() {
             <div className="main-container">
                 <Hero/>
             </div>
-            <section className="cards-container main-layout">
-                <a id="#cards"> <Cards/></a>
+            <section id="cards" className="cards-container main-layout">
+                 <Cards/>
             </section>
 
             <section className="about-container main-layout">
