@@ -17,7 +17,7 @@ export class MailFilter extends React.Component {
     const {txt} = this.state;
     return (
       <div className="mail-filter-search flex">
-        <img src="../../../assets/img/search.svg" />
+        <img src="./././assets/img/search.svg" />
         <form>
           <input
             type="text"

@@ -6,7 +6,9 @@ import {NoteApp} from 'pages/NoteApp.jsx';
 import {MailDetails} from 'apps/mail/pages/MailDetails.jsx';
 
 // imports cmps //
-import {Header} from 'cmps/Header.jsx';
+import { Header } from 'cmps/Header.jsx';
+import { Footer } from './cmps/Footer.jsx';
+
 
 // import services//
 
@@ -28,6 +30,7 @@ export function App() {
             <Route component={Home} path="/" />
           </Switch>
         </main>
+        <Footer/>
       </section>
     </Router>
   );

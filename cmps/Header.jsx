@@ -12,6 +12,7 @@ export function Header() {
                     <li> <NavLink exact to="book">book</NavLink></li>
                     <li><NavLink to="mail">mail</NavLink></li>
                     <li><NavLink to="note">keep</NavLink></li>
+                    <li><NavLink to="/">Home</NavLink></li>
                 </ul>
             </nav>
             </div>
