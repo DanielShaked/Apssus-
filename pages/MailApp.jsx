@@ -42,7 +42,6 @@ export class MailApp extends React.Component {
   };
 
   toggleNav = () => {
-    console.log('nav is toggled..');
     this.setState({isNavToggled: !this.state.isNavToggled});
   };
 

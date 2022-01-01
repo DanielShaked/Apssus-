@@ -17,7 +17,6 @@ export class MailSideNav extends React.Component {
 
   render() {
     const {status} = this.state.criteria;
-    console.log('props', this.props);
     return (
       <section className={`mail-sidenav ${this.props.isNavToggled && 'active-sidenav'}`}>
         <div onClick={this.props.onOpenCompose} className="mail-sidenav-compose">

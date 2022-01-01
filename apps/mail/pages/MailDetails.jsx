@@ -36,8 +36,6 @@ export class MailDetails extends React.Component {
             <i className="action-back-arrow fas fa-arrow-left"></i>
             <p className="action-back-content">Go Back</p>
           </div>
-          {/* <i className="action-next fas fa-arrow-right"></i>
-          <p>Next</p> */}
         </div>
         <div className="mail-details-content">
           <div className="content-header">
