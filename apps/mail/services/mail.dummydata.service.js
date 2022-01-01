@@ -101,6 +101,17 @@ const DUMMY_EMAILS = [
     status: 'inbox',
     isStarred: false,
   },
+  {
+    id: utilService.makeId(),
+    subject: 'Student loans meeting',
+    body: `	High turnaround rate optimize for search and we've got kpis for that. Usabiltiy let's put a pin in that pre launch or can we jump on a zoom so form without content style without meaning nor moving the goalposts. Time vampire pull in ten extra bodies to help roll the tortoise, nor get six alpha pups in here for a focus group, nor dear hiring manager: powerpoint Bunny reinvent the wheel. Today shall be a cloudy day, thanks to blue sky thinking, we can now deploy our new ui to the cloud . Quick-win workflow ecosystem. Get six alpha pups in here for a focus group put a record on and see who dances. No need to talk to users, just base it on the space calculator dear hiring manager:. Forcing function blue sky thinking, so they have downloaded gmail and seems to be working for now or horsehead offer, nor obviously so we should leverage existing asserts that ladder up to the message this medium needs to be more dynamic.`,
+    isRead: true,
+    sentAt: 1637774407228,
+    to: 'yvc@EmekYezreel.ac.il',
+    from: 'yuval@Appsus.com',
+    status: 'draft',
+    isStarred: false,
+  },
 ];
 
 function getDummyEmails() {

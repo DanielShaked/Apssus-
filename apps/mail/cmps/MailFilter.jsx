@@ -16,19 +16,18 @@ export class MailFilter extends React.Component {
   render() {
     const {txt} = this.state;
     return (
-      // <section className="mail-filter main-layout">
-      <div className="mail-filter-search">
+      <div className="mail-filter-search flex">
+        <img src="../../../assets/img/search.svg" />
         <form>
           <input
             type="text"
             name="search"
             value={txt}
-            placeholder="Search for emails here..."
+            placeholder="Search emails"
             onChange={this.handleChange}
           />
         </form>
       </div>
-      // </section>
     );
   }
 }

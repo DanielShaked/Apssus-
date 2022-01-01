@@ -14,10 +14,3 @@
   align-items: center;
   padding: 1rem;
 }
-.mail-list-header > *:not(:last-child) {
-  width: 15rem;
-}
-
-.mail-list-header > h3:last-child {
-  justify-self: end;
-}

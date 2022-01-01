@@ -1,6 +1,7 @@
-import {MailLongText} from './MailLongText.jsx';
-import {mailService} from '../services/mail.service.js';
 import {utilService} from '../../../services/util.service.js';
+
+import {mailService} from '../services/mail.service.js';
+import {MailLongText} from './MailLongText.jsx';
 
 const {Link} = ReactRouterDOM;
 
@@ -14,7 +15,6 @@ export class MailPreview extends React.Component {
   onToggleStar = ev => {
     ev.preventDefault();
     mailService.toggleStar(this.props.mail.id).then(() => {
-      console.log('Toggle star...');
       // TODO: to check if need to reload all emails
       //   this.props.loadMails();
     });
@@ -58,13 +58,15 @@ export class MailPreview extends React.Component {
 
           <div className="mail-preview-actions">
             <div className="actions-btns flex">
-              {isReadIcon}
+              <div className="btns-hover">
+                {isReadIcon}
 
-              <i
-                onClick={this.onToggleStar}
-                className={`${isStarred ? 'active-star' : ''} mail-preview-star fas fa-star`}></i>
+                <i
+                  onClick={this.onToggleStar}
+                  className={`${isStarred ? 'active-star' : ''} mail-preview-star fas fa-star`}></i>
 
-              <i onClick={this.onDeleteMail} className="mail-preview-delete fas fa-trash"></i>
+                <i onClick={this.onDeleteMail} className="mail-preview-delete fas fa-trash"></i>
+              </div>
 
               <p className="actions-time">{utilService.getFormattedDate(mail.sentAt)}</p>
             </div>
