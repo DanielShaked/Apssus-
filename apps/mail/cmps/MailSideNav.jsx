@@ -11,19 +11,17 @@ export class MailSideNav extends React.Component {
   setCriteriaStatus = status => {
     this.setState({criteria: {...this.state.criteria, status}}, () => {
       this.props.onSetCriteria(this.state.criteria);
+      if (window.innerWidth < 1020) this.props.toggleNav();
     });
   };
 
   render() {
     const {status} = this.state.criteria;
+    console.log('props', this.props);
     return (
-      <section className="mail-sidenav">
+      <section className={`mail-sidenav ${this.props.isNavToggled && 'active-sidenav'}`}>
         <div onClick={this.props.onOpenCompose} className="mail-sidenav-compose">
-          {/* <button onClick={this.props.onOpenCompose}>
-            <i className="fas fa-plus"></i>
-            Compose
-          </button> */}
-          <i className="fas fa-plus"> </i>
+          <img src="../../../assets/img/plus.png" />
         </div>
         <ul className="clean-list flex">
           <li

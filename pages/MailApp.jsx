@@ -1,11 +1,11 @@
 import {mailService} from '../apps/mail/services/mail.service.js';
 import {Loader} from '../cmps/Loader.jsx';
 
-import {MailFilter} from '../apps/mail/cmps/MailFilter.jsx';
 import {MailList} from '../apps/mail/cmps/MailList.jsx';
 import {MailCompose} from '../apps/mail/cmps/MailCompose.jsx';
 import {MailModal} from '../apps/mail/cmps/MailModal.jsx';
 import {MailSideNav} from '../apps/mail/cmps/MailSideNav.jsx';
+import {Screen} from '../apps/mail/cmps/Screen.jsx';
 
 export class MailApp extends React.Component {
   state = {
@@ -18,6 +18,7 @@ export class MailApp extends React.Component {
     },
     isCompose: false,
     isModal: false,
+    isNavToggled: false,
   };
 
   componentDidMount() {
@@ -40,6 +41,11 @@ export class MailApp extends React.Component {
     this.setState({isModal: !this.state.isModal});
   };
 
+  toggleNav = () => {
+    console.log('nav is toggled..');
+    this.setState({isNavToggled: !this.state.isNavToggled});
+  };
+
   onClose = () => {
     this.setState({isCompose: false});
   };
@@ -53,26 +59,24 @@ export class MailApp extends React.Component {
     if (!mails) return <Loader />;
     return (
       <section className="mail-app">
+        <Screen isNavToggled={this.state.isNavToggled} toggleNav={this.toggleNav} />
         <div className="mail-main">
-          {/* <aside className="mail-side-nav"> */}
-          {/* <button onClick={this.onOpenCompose}>
-              <i className="fas fa-plus"></i>
-              Compose
-            </button> */}
           <MailSideNav
             onOpenCompose={this.onOpenCompose}
             criteria={this.state.criteria}
             onSetCriteria={this.onSetCriteria}
             loadMails={this.loadMails}
+            isNavToggled={this.state.isNavToggled}
+            toggleNav={this.toggleNav}
           />
-          {/* </aside> */}
-          {/* <MailFilter criteria={this.state.criteria} onSetCriteria={this.onSetCriteria} /> */}
+
           <MailList
             mails={mails}
             loadMails={this.loadMails}
             toggleModal={this.toggleModal}
             criteria={this.state.criteria}
             onSetCriteria={this.onSetCriteria}
+            toggleNav={this.toggleNav}
           />
           {this.state.isCompose && <MailCompose onClose={this.onClose} toggleModal={this.toggleModal} />}
           {this.state.isModal && <MailModal txt="Message sent successfully" toggleModal={this.toggleModal} />}

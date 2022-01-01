@@ -1,8 +1,44 @@
-.mail-filter-search input {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  width: 40vw;
+.mail-filter-search-container {
+  align-items: center;
+  gap: 10px;
 }
+
+.mail-filter-search {
+  flex-grow: 1;
+  max-width: 720px;
+  background-color: #f1f3f4;
+  border-radius: 8px;
+  padding: 5px 20px;
+  gap: 20px;
+}
+
+.mail-filter-search input {
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  height: 40px;
+  width: 100%;
+  background-color: inherit;
+}
+
+.mail-hamburger {
+  font-size: 38px;
+  cursor: pointer;
+}
+
+@media (min-width: 1020px) {
+  .mail-hamburger.fas {
+    display: none;
+  }
+}
+
+/* .mail-filter-search input {
+  outline: none;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  height: 50px;
+  width: 40vw;
+  background-color: #f1f3f4;
+  padding: 5px 20px;
+  border-radius: 8px;
+} */
