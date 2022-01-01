@@ -4,10 +4,10 @@ import { SearchNote } from "./SearchNote.jsx"
 export function NoteHeader({onSetFilter}) {
     return (
         <div className="note-header ">
-            <div className="main-layout">
+            <div className="header main-layout">
             <div className="logo-container ">
-                <img src="../assets/img/keep-logo.png" alt="" />
-                <span>KeepIt </span>
+                <img src="../assets/img/keep-logo.png?" alt="" />
+                <span className="logo-txt">KeepIt </span>
             </div>
                 <SearchNote onSetFilter={onSetFilter}/>
 

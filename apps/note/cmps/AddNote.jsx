@@ -4,14 +4,10 @@ export class AddNote extends React.Component {
     state = {
         value: '',
         type: 'note-txt',
-        placeholder: 'Enter new note here...',
-        // isAddToDo: false,
-        
+        placeholder: 'Enter new note here...',        
     }
     
-    componentDidMount() {
-      
-    }
+    
 
     handleChange = ({ target }) => {
         const field = target.name;
@@ -39,16 +35,12 @@ export class AddNote extends React.Component {
            
     }
 
-    // onToggleTodoAdd = (isAddToDo) => {
-    //     this.setState({ isAddToDo });
-    // }
-
+    
     onAddNote = () => {
         const { value, type } = this.state;
         if (!value || !type) return;
         this.props.addNote(value, type);
         this.resetInput();
-        // this.setState({placeholder:'Enter new note here...'})
     }
 
     onSubmit = (ev) => {
@@ -82,8 +74,10 @@ export class AddNote extends React.Component {
                                 value={value}
                                 placeholder={placeholder}
                                 onChange={this.handleChange}
-                                onBlur={this.onAddNote} />
+                            onBlur={this.onAddNote} />
+                        <div className="buttons">
                             {buttons}
+                        </div>
                         </form>
                     </div>
                 

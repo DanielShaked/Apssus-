@@ -27,6 +27,8 @@
 @import '../css/cmps/mail/screen.css';
 
 /* Cmps-Keep */
+
+@import '../css/cmps/keep/note-header.css';
 @import '../css/cmps/keep/note-list.css';
 @import '../css/cmps/keep/note-preview.css';
 @import '../css/cmps/keep/color-picker.css';
@@ -35,3 +37,4 @@
 @import '../css/cmps/keep/general.css';
 @import '../css/pages/keep.css';
 @import '../css/cmps/keep/note-todos.css';
+@import '../css/cmps/keep/note-responsive-design.css';

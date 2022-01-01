@@ -13,11 +13,11 @@ export class SearchNote extends React.Component{
         
     }
 
-    onSubmitFilter = (ev) => {
-        ev.preventDefault()
-        this.props.onSetFilter(this.state.value)
-        this.cleanForm()
-    }
+    // onSubmitFilter = (ev) => {
+    //     ev.preventDefault()
+    //     this.props.onSetFilter(this.state.value)
+    //     this.cleanForm()
+    // }
 
     cleanForm = () => {
         this.setState({value:''})
@@ -30,15 +30,13 @@ export class SearchNote extends React.Component{
         
         return (
             <div className="search-container">
-                <form onSubmit={this.onSubmitFilter}>
                     <input
                         placeholder="Search note..."
                         type="search"
                         name="value"
                         value={value}
-                        onChange={this.handleChange} onBlur={this.onSubmitFilter} />
+                        onChange={this.handleChange} />
                     <i className="fas fa-search"></i>
-                </form>
             </div>
         )
     }

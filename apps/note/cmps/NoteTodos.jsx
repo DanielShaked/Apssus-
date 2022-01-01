@@ -18,12 +18,12 @@ export class NoteTodos extends React.Component {
         if (!note.info.todos) return;
 
         const todos = note.info.todos.map(todo =>
-            <li className={`clean-list todo ${(todo.isDone) ? 'todo-done' : ''}`}
+            <li className="clean-list todo"
                 key={todo.id}>
                 <i className={`far ${(todo.isDone) ? 'fa-check-square' : 'fa-square'}`}
                     onClick={() => this.onToggleDone((todo.id))}>
                 </i>
-                <span contentEditable onBlur={(ev)=>this.onUpdateTodoContent(ev,todo.id)}>{todo.txt}</span>
+                <span contentEditable className={`${(todo.isDone) ? 'todo-done' : ''}`} onBlur={(ev)=>this.onUpdateTodoContent(ev,todo.id)}>{todo.txt}</span>
                 <i onClick={() => this.onRemoveTodo(todo.id)} className="fas fa-minus-circle"></i>
                 
             </li>)

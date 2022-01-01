@@ -13,7 +13,8 @@ export const noteService = {
     toggleDone,
     addTodo,
     removeTodo,
-    updateTodoContent
+    updateTodoContent,
+    duplicateNote
 
 }
 
@@ -39,9 +40,9 @@ function query(filterChar) {
         notes = notes.filter(note => {
             switch (note.type) {
                 case 'note-txt':
-                    return note.info.txt.split(' ')[0].toLowerCase().includes(filterChar)
+                    return note.info.txt.toLowerCase().includes(filterChar.toLowerCase())
                 case 'note-todos':
-                    return [...notes, note.info.title.split(' ')[0].toLowerCase().includes(filterChar)]
+                    return note.info.title.toLowerCase().includes(filterChar.toLowerCase())
             }
         })
     }
@@ -59,6 +60,15 @@ function updateTodoContent(todoId, noteId, value) {
     let noteIdx = notes.findIndex(note => note.id === noteId);
     const todoIdx = notes[noteIdx].info.todos.findIndex(todo => todo.id === todoId);
     notes[noteIdx].info.todos[todoIdx].txt = value;
+    _saveNotesToStorage(notes);
+    return Promise.resolve();
+}
+
+function duplicateNote(noteId) {
+    let notes = _loadNotesFromStorage();
+    const noteIdx = notes.findIndex(note => note.id === noteId);
+    const duplicateNote = { ...notes[noteIdx], id: utilService.makeId() };
+    notes.unshift(duplicateNote);
     _saveNotesToStorage(notes);
     return Promise.resolve();
 }
@@ -197,15 +207,18 @@ function createNotes() {
                 }
 
             },
+
             {
                 id: utilService.makeId(),
                 type: "note-todos",
                 isPinned: true,
                 info: {
-                    title: "Get my stuff together",
+                    title: "01/01/22 - tasks:",
                     todos: [
                         { id: utilService.makeId(), txt: "Driving liscence", isDone: true },
-                        { id: utilService.makeId(), txt: "Coding power", isDone: false }
+                        { id: utilService.makeId(), txt: "Coding power", isDone: false },
+                        { id: utilService.makeId(), txt: "sleep", isDone: false },
+                        { id: utilService.makeId(), txt: "eat", isDone: false },
                     ]
                 },
                 style: {
@@ -218,10 +231,47 @@ function createNotes() {
                 type: "note-txt",
                 isPinned: true,
                 info: {
-                    txt: "Go Sleep!"
+                    txt: "08:30-10:00 - CODE REVIEW"
+                },
+                style: {
+                    backgroundColor: "#fbbc04"
+                }
+
+            },
+            {
+                id: utilService.makeId(),
+                type: "note-img",
+                isPinned: true,
+                info: {
+                    url: "https://media4.giphy.com/media/qvtLuBQ7WVD0ZurSUz/giphy.gif?cid=ecf05e47aafc678dc980417742da1ee5d970c0c9efbe3ca7&rid=giphy.gif&ct=g"
+                },
+                style: {
+                    backgroundColor: "#f28b82"
+                }
+
+            },
+            {
+                id: utilService.makeId(),
+                type: "note-img",
+                isPinned: true,
+                info: {
+                    url: "https://www.juventus.com/images/image/private/t_portrait_mobile/dev/t5mex3dyn30xi3ox6ii5.jpg"
+
                 },
                 style: {
                     backgroundColor: "#a7ffeb"
+                }
+
+            },
+            {
+                id: utilService.makeId(),
+                type: "note-video",
+                isPinned: true,
+                info: {
+                    urlId: "LnCkiHgK1EM"
+                },
+                style: {
+                    backgroundColor: "#d7aefb"
                 }
 
             },
@@ -230,10 +280,6 @@ function createNotes() {
     }
     _saveNotesToStorage(notes)
 }
-
-
-
-
 
 
 // Locals Functions
