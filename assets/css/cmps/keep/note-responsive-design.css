@@ -54,7 +54,7 @@
         width: 300px;
     } */
 
-  /* .i-frame {
+  /* iframe {
     width: 250px;
     height: 200px;
   } */
@@ -130,7 +130,7 @@
   }
 
   .note-list {
-    columns: 5;
+    columns: 4;
   }
 }
 
