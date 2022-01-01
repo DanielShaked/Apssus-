@@ -20,7 +20,7 @@ export class MailSideNav extends React.Component {
     return (
       <section className={`mail-sidenav ${this.props.isNavToggled && 'active-sidenav'}`}>
         <div onClick={this.props.onOpenCompose} className="mail-sidenav-compose">
-          <img src="../../../assets/img/plus.png" />
+          <img src="../../../assets/img/plus.PNG" />
         </div>
         <ul className="clean-list flex">
           <li
