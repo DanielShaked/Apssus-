@@ -2,7 +2,7 @@ import { AddNote } from "../apps/note/cmps/AddNote.jsx"
 import { NoteHeader } from "../apps/note/cmps/NoteHeader.jsx"
 import { NoteList } from "../apps/Note/cmps/NoteList.jsx"
 import { SearchNote } from "../apps/note/cmps/SearchNote.jsx"
-import { noteService } from "../apps/Note/services/note.service.js"
+import { noteService } from "../apps/note/services/note.service.js"
 
 
 export class NoteApp extends React.Component {
