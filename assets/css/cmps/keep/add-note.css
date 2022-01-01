@@ -4,24 +4,29 @@
 }
 
 .add-note form {
-    border: 1px solid gray;
     /* padding: 5px; */
-    box-shadow: 0px 3px 16px 0px rgb(50 50 50 / 15%);
+    margin-bottom: 22px;
+    margin-left: 15%;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
     border-radius: 20px;
-    width: 50%;
+    width: 70%;
     text-align: center;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
 
 }
 
 
 .add-note form input {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 15px;
     border: 2px solid gray;
     margin-left: 10px;
     border-radius: 12px;
-    width: 50%;
+    width: 100%;
     border: none;
     outline: none;
 

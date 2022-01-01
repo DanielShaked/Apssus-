@@ -35,6 +35,10 @@ export class NoteApp extends React.Component {
         noteService.createNote(value, type)
             .then(this.loadNotes());            
     }
+    duplicateNote = (noteId) => {
+        noteService.duplicateNote(noteId)
+            .then(this.loadNotes())
+    }
 
     removeNote = (noteId) => {
         noteService.removeNote(noteId)
@@ -91,6 +95,7 @@ export class NoteApp extends React.Component {
                 <AddNote addNote={this.addNote} />
                 <span className="sub-title">pinned notes:</span>
                     <NoteList
+                    duplicateNote={this.duplicateNote}
                     updateTodoContent={this.updateTodoContent}
                     removeTodo={this.removeTodo}
                     addTodo={this.addTodo}
@@ -103,6 +108,7 @@ export class NoteApp extends React.Component {
                 
                 <span className="sub-title">other notes:</span>
                     <NoteList
+                    duplicateNote={this.duplicateNote}
                     updateTodoContent={this.updateTodoContent}
                     removeTodo={this.removeTodo}
                     addTodo={this.addTodo}

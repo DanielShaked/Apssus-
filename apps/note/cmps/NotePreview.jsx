@@ -7,9 +7,10 @@ import { NoteVideo } from "./NoteVideo.jsx";
 
 
 
-export function NotePreview({ note,updateTodoContent, addTodo,removeTodo,  removeNote, changeBgColor,toggleDoneTodo, updateNoteContent, onTogglePinedNote }) {
+export function NotePreview({ note,updateTodoContent, duplicateNote,addTodo,removeTodo,  removeNote, changeBgColor,toggleDoneTodo, updateNoteContent, onTogglePinedNote }) {
 
     const dataProps = {
+        duplicateNote,
         removeNote,
         changeBgColor,
         updateNoteContent,
@@ -48,6 +49,7 @@ export function NotePreview({ note,updateTodoContent, addTodo,removeTodo,  remov
             <i onClick={onTogglePin}  className="fas fa-thumbtack"></i>
             {getCmpByType(note.type)}
             <NoteEditor
+                duplicateNote={duplicateNote}
                 removeNote={removeNote}
                 changeBgColor={changeBgColor}
                 note={note} /> 

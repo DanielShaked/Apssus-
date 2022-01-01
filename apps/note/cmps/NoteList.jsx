@@ -2,7 +2,7 @@
 import { NotePreview } from "./NotePreview.jsx"
 
                     
-export function NoteList({ notes,updateTodoContent, removeNote,addTodo,toggleDoneTodo,removeTodo, changeBgColor, updateNoteContent, onTogglePinedNote }) {
+export function NoteList({ notes,updateTodoContent, duplicateNote,removeNote,addTodo,toggleDoneTodo,removeTodo, changeBgColor, updateNoteContent, onTogglePinedNote }) {
    
     
     if (!notes.length) return <h1>There are no notes to show</h1>
@@ -10,6 +10,7 @@ export function NoteList({ notes,updateTodoContent, removeNote,addTodo,toggleDon
         <section className="note-list">
             {notes.map(note =>
                 <NotePreview
+                duplicateNote={duplicateNote}
                 updateTodoContent={updateTodoContent}
                 removeTodo={removeTodo}
                 addTodo={addTodo}

@@ -12,18 +12,23 @@ export class NoteEditor extends React.Component {
         // TODO: busService user-msg
     }
     
+    onDuplicateNote = () => {
+        const { duplicateNote, note } = this.props;
+        duplicateNote(note.id);
+    }
     
     onToggleColorPicker = (isOpen) => {
         this.setState({isColorPickerOpen: isOpen})
     }
     
     render() {
-        const { note, removeNote, changeBgColor} = this.props;
+        const { note, changeBgColor} = this.props;
         const { isColorPickerOpen } = this.state;
         console.log('isColorPickerOpen:', isColorPickerOpen);
         
         return(
             <section className="note-editor">
+                <i onClick={this.onDuplicateNote} className="fas fa-paste"></i>
                 <i onClick={() => this.onToggleColorPicker(true)} className="fas fa-palette"></i>
                 {(isColorPickerOpen)
                     && <ColorPicker
