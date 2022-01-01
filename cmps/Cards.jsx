@@ -1,5 +1,6 @@
 import {} from '../assets/img/gmail.'
 import { GmailSvg } from './GmailSvg.jsx'
+import { KeepSvg } from './KeepSvg'
 
 const { Link } = ReactRouterDOM
 
@@ -30,7 +31,7 @@ export function Cards() {
                     </Link>
                 </div>
                 <div className="card">
-                    <GmailSvg/>
+                    <KeepSvg/>
                     <h3>app name</h3>
                     <p>Lorem ipsum dolor sit amet consectetur</p>
                     <Link to ="/mail" >
