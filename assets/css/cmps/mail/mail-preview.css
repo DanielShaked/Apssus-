@@ -105,3 +105,10 @@
     margin-bottom: 0;
   }
 }
+
+/* MOBILE ONLY */
+@media (max-width: 1020px) {
+  .btns-hover {
+    opacity: 1;
+  }
+}
