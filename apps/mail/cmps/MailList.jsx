@@ -11,9 +11,7 @@ export function MailList({mails, loadMails, onSetCriteria, criteria, toggleNav})
       </div>
       <div className="mail-list-rows-container">
         <div className="mail-list-header">
-          <h3 className="mail-list-from">
-            {`${criteria.status.charAt(0).toUpperCase() + criteria.status.slice(1)} Messages`}
-          </h3>
+          <h3 className="header-folder">{`${criteria.status} Messages`}</h3>
         </div>
         {mails.length === 0 && <h1>There are no emails to show</h1>}
         {mails && mails.map(mail => <MailPreview key={mail.id} mail={mail} loadMails={loadMails} />)}
