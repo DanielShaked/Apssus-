@@ -24,6 +24,8 @@
 
 .mail-preview-star {
   color: rgb(188, 188, 188);
+
+  transition: 0.4s;
 }
 
 .mail-preview-star.active-star {
