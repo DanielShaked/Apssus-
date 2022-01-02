@@ -12,19 +12,32 @@
 }
 
 iframe {
-    max-width: 220px;
-    max-height: 160px;
+    width: 120px;
+    height: 120px;
 }
 
 
+
+.main-layout span.sub-title {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+    color: gray;
+    line-height: 24px;
+    font-size: 22px;
+    margin-left: 3%;
+
+}
 
 
 .note-list .search-container {
+    position: relative;
     margin-top: 35px;
     text-align: center;
+
 }
 
 .note-list .note-preview {
+    transition: 0.3s ease-in-out;
     break-inside: avoid;
     line-break: anywhere;
     min-width: 140px;
@@ -41,6 +54,8 @@ iframe {
     text-align: center;
     border-radius: 15px;
 }
+
+
 
 .note-preview img {
     width: 100%;

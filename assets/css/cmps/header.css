@@ -2,11 +2,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 10vh;
 }
 
 .header-container {
   border-bottom: 1px solid lightgray;
+}
 
+.header-container .keep-logo {
+  position: absolute;
+  left: 110%;
+  top: -100%;
+  width: 50px;
+}
+
+.logo-container a {
+  position: relative;
 }
 
 .header .fa-th-large {
@@ -27,15 +38,3 @@
   display: flex;
   gap: 15px;
 }
-
-/* .main-nav ul>*:not(:last-child) {
-  margin-inline-end: 1rem;
-} */
-
-/* .main-nav ul li a {
-  color: #1d3557;
-} */
-
-/* .main-nav ul li a.active {
-  color: #e63946;
-} */

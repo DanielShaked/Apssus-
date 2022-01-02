@@ -197,7 +197,7 @@ function createNotes() {
             {
                 id: utilService.makeId(),
                 type: "note-img",
-                isPinned: false,
+                isPinned: true,
                 info: {
                     url: "https://www.coding-academy.org/images/ca-logo-dark@2x.png",
                     title: "Bobi and Me"
@@ -275,11 +275,44 @@ function createNotes() {
                 }
 
             },
+
+            {
+                id: utilService.makeId(),
+                type: "note-todos",
+                isPinned: true,
+                info: {
+                    title: "05/01/22 - tasks:",
+                    todos: [
+                        { id: utilService.makeId(), txt: "node.js practice", isDone: true },
+                        { id: utilService.makeId(), txt: "CR - afternoon", isDone: false },
+                        { id: utilService.makeId(), txt: "running", isDone: false },
+                        { id: utilService.makeId(), txt: "relax!", isDone: false },
+                    ]
+                },
+                style: {
+                    backgroundColor: "#fbbc04"
+                }
+
+            },
+            {
+                id: utilService.makeId(),
+                type: "note-video",
+                isPinned: false,
+                info: {
+                    urlId: "M-aoyPa41Ic"
+                },
+                style: {
+                    backgroundColor: "#a7ffeb"
+                }
+
+            },
         ];
 
     }
     _saveNotesToStorage(notes)
 }
+
+
 
 
 // Locals Functions

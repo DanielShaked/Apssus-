@@ -89,7 +89,8 @@ export class NoteApp extends React.Component {
         if (!pinnedNotes  || !unPinnedNotes) return <h1>no notes</h1>
         return (
             <section className="note-app ">
-                <NoteHeader onSetFilter={this.onSetFilter}/>
+                {/* <NoteHeader onSetFilter={this.onSetFilter}/> */}
+                <SearchNote onSetFilter={this.onSetFilter} />
                 {/* <SearchNote/> */}
                 <div className="main-layout">
                 <AddNote addNote={this.addNote} />

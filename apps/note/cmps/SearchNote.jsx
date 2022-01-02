@@ -13,12 +13,6 @@ export class SearchNote extends React.Component{
         
     }
 
-    // onSubmitFilter = (ev) => {
-    //     ev.preventDefault()
-    //     this.props.onSetFilter(this.state.value)
-    //     this.cleanForm()
-    // }
-
     cleanForm = () => {
         this.setState({value:''})
     }
@@ -30,13 +24,14 @@ export class SearchNote extends React.Component{
         
         return (
             <div className="search-container">
+                    <img src="./././assets/img/search.svg" />
                     <input
                         placeholder="Search note..."
                         type="search"
                         name="value"
                         value={value}
                         onChange={this.handleChange} />
-                    <i className="fas fa-search"></i>
+                    
             </div>
         )
     }

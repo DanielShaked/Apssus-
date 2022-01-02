@@ -5,7 +5,7 @@ export function NoteVideo({dataProps}) {
     
     return (
         <section className="note-video" contentEditable>
-            <iframe width="270px" height="220px"
+            <iframe width="250" height="200"
                 src={`//www.youtube.com/embed/${note.info.urlId}`} frameBorder="0"
                 allow="autoplay"></iframe>
            
