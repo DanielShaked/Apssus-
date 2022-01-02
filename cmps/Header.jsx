@@ -1,58 +1,45 @@
-import { HeaderMenu } from "./HeaderMenu.jsx";
-const {NavLink} = ReactRouterDOM
+import {HeaderMenu} from './HeaderMenu.jsx';
+const {NavLink} = ReactRouterDOM;
 
 export class Header extends React.Component {
+  state = {
+    isVisible: false,
+    isOnKeep: false,
+  };
 
-    
-    state = {
-        isVisible: false,
-        isOnKeep: false,
-    }
-    
-    
-    
-    onToggleMenu = () => {
-        const { isVisible } = this.state;
-        this.setState({isVisible: !isVisible})
-    }
+  onToggleMenu = () => {
+    const {isVisible} = this.state;
+    this.setState({isVisible: !isVisible});
+  };
 
+  render() {
+    const {isVisible} = this.state;
 
-    
+    return (
+      <div className="header-container">
+        <header className="header main-layout">
+          <div className="logo-container">
+            <NavLink exact to="/">
+              <span className="logo-txt">Appsus</span>
+            </NavLink>
+          </div>
 
-    render() {
-        const { isVisible } = this.state;
-        
-        return (
-            <div className="header-container">
-                <header className="header main-layout">
-                    <div className="logo-container">
-                    <NavLink exact to="/">
-                    <span className="logo-txt">Apsus</span>
-                    </NavLink>
-                        
-                </div>
-                    
-                {(!isVisible) && <i onClick={this.onToggleMenu} className="fas fa-th-large"></i>  }
-            
-                    {(isVisible) && <HeaderMenu onToggleMenu={this.onToggleMenu}/>}
-                </header>
-            </div>
-            
-            )
-        }
-        
-        
-    }
-    
-    
-    
-    {/* <header className="header">
-    
-    
-    
-    </header> */}
+          {!isVisible && <i onClick={this.onToggleMenu} className="fas fa-th-large"></i>}
 
+          {isVisible && <HeaderMenu onToggleMenu={this.onToggleMenu} />}
+        </header>
+      </div>
+    );
+  }
+}
 
+{
+  /* <header className="header">
+    
+    
+    
+    </header> */
+}
 
 //     return (
 //         <header className="header">
