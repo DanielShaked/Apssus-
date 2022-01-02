@@ -1,18 +1,93 @@
+/* ANIMATIONS */
+@keyframes right {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+@keyframes top {
+  0% {
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100;
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100;
+  }
+}
+@keyframes float-up-20 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes float-up-8 {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 .hero-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 3rem;
-
+  text-align: center;
   height: 85vh;
+  border-bottom: 1px solid #d3d3d370;
+  margin-bottom: 20px;
 }
 
 .hero-container .hero-left {
-  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-container .hero-right {
-  padding-right: 2.5rem;
+.hero-right {
+  animation: left 1.5s ease-in-out;
+}
+
+.yellow-circle,
+.blue-circle,
+.red-circle,
+.green-circle {
+  animation: float-up-20 3s ease-in-out infinite;
+}
+
+.hero-right svg {
+  width: 300px;
+  height: 300px;
+}
+
+.hero-left .hero-txt {
+  animation: right 1.5s ease-in-out;
 }
 
 .hero-left .hero-txt p {
@@ -34,6 +109,7 @@
   color: white;
   font-weight: 600;
   border-radius: 15px;
+  animation: top 1s ease-in-out;
 }
 
 .cards-title {
@@ -48,6 +124,7 @@
 
 .card-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 40px;
   width: 100%;
@@ -62,11 +139,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  width: 300px;
+  width: 95%;
   background-color: #fff;
   text-align: center;
   border: 1px solid rgb(224, 224, 224);
   padding: 20px;
+  margin: 0 auto;
 }
 .card-container .card .card-btn {
   background-color: #fff;
@@ -85,7 +163,6 @@
 .about-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 2.5rem;
   font-weight: 400;
   font-family: Roboto;
   font-size: 2rem;
@@ -102,6 +179,7 @@
 
 .about {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 40px;
   max-width: 980px;
@@ -113,8 +191,8 @@
 
 .about img {
   border-radius: 100%;
-  width: 400px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   border: 2px solid rgb(224, 224, 224);
 }
@@ -148,4 +226,43 @@
 
 .about .social a:hover {
   background-color: rgb(224, 224, 224);
+}
+
+@media (min-width: 780px) {
+  .hero-right svg {
+    width: 380px;
+    height: 380px;
+    margin-bottom: 100px;
+  }
+  .card-container .card {
+    width: 494px;
+  }
+}
+@media (min-width: 1020px) {
+  .hero-container {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .hero-right svg {
+    padding-bottom: 0px;
+  }
+
+  .card-container {
+    flex-direction: row;
+    margin-bottom: 150px;
+  }
+  .about {
+    flex-direction: row;
+  }
+  .about img {
+    width: 350px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-right svg {
+    width: 400px;
+    height: 400px;
+  }
 }

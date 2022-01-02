@@ -17,10 +17,12 @@ export function About() {
         </div>
       </div>
       <div className="about">
-        <img src="" alt="" />
+        <img src="./assets/img/daniel.jpeg" alt="" />
         <div className="about-content">
           <h3>Daniel Shaked</h3>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, commodi.</p>
+          <p>23 Years old from Jerusalem, Israel. Always looking for a new challenge.
+            All about learning new things, and new technologies.
+            Studying web development, Full-Stack, in Coding-Academy Boot-Camp</p>
         </div>
         <div className="social">
           <a target="_blank" href="https://github.com/DanielShaked" className="fab fa-github"></a>

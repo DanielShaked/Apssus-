@@ -29,12 +29,12 @@ iframe {
 }
 
 
-.note-list .search-container {
+/* .note-list .search-container {
     position: relative;
     margin-top: 35px;
     text-align: center;
 
-}
+} */
 
 .note-list .note-preview {
     transition: 0.3s ease-in-out;
