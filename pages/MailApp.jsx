@@ -23,6 +23,7 @@ export class MailApp extends React.Component {
 
   componentDidMount() {
     this.loadMails();
+    window.scrollTo(0, 0);
   }
 
   loadMails = () => {
