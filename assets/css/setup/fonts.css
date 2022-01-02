@@ -20,6 +20,12 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: 'marvel';
+  src: url('../../fonts/Marvel-Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
 
 @font-face {
   font-family: 'Roboto';
