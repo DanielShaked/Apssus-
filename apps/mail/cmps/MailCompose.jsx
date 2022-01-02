@@ -27,8 +27,7 @@ export class MailCompose extends React.Component {
 
   onSendEmail = ev => {
     ev.preventDefault();
-    console.log('sending..');
-    console.log('this.state.email', this.state.email);
+
     mailService.send(this.state.email).then(() => {
       this.props.onClose();
       this.props.toggleModal();

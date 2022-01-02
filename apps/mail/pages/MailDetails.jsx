@@ -28,7 +28,6 @@ export class MailDetails extends React.Component {
     const {mail} = this.state;
     if (!mail) return <Loader />;
     const {from, to, subject, sentAt, body} = this.state.mail;
-    console.log('mail', mail);
     return (
       <section className="mail-details main-layout">
         <div className="mail-details-actions flex">

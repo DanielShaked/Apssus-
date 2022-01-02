@@ -7,7 +7,7 @@ import { NoteVideo } from "./NoteVideo.jsx";
 
 
 
-export function NotePreview({ note,updateTodoContent, duplicateNote,addTodo,removeTodo,  removeNote, changeBgColor,toggleDoneTodo, updateNoteContent, onTogglePinedNote }) {
+export function NotePreview({ note,updateTodoContent, toggleModal, duplicateNote,addTodo,removeTodo,  removeNote, changeBgColor,toggleDoneTodo, updateNoteContent, onTogglePinedNote }) {
 
     const dataProps = {
         duplicateNote,
@@ -17,6 +17,7 @@ export function NotePreview({ note,updateTodoContent, duplicateNote,addTodo,remo
         toggleDoneTodo,
         addTodo,
         removeTodo,
+        toggleModal,
         updateTodoContent,
         note
     }
@@ -39,16 +40,16 @@ export function NotePreview({ note,updateTodoContent, duplicateNote,addTodo,remo
         onTogglePinedNote(note.id,!notePinStatus);
     }
 
-    function onRemoveNote() {
-        removeNote(note.id);
-        // TODO: busService user-msg
-    }
+    // function onRemoveNote() {
+    //     removeNote(note.id);
+    // }
     const { backgroundColor } = note.style;
     return (
         <section style={{ backgroundColor }} className="note-preview">
             <i onClick={onTogglePin}  className="fas fa-thumbtack"></i>
             {getCmpByType(note.type)}
             <NoteEditor
+                toggleModal={toggleModal}
                 duplicateNote={duplicateNote}
                 removeNote={removeNote}
                 changeBgColor={changeBgColor}

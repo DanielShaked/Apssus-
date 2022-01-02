@@ -56,7 +56,6 @@ export class NoteTodos extends React.Component {
     }
 
     onRemoveTodo = (todoId) => {
-        console.log('bla');
         const { removeTodo, note } = this.props.dataProps;
         removeTodo(todoId, note.id);
     }

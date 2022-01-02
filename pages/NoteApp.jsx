@@ -1,6 +1,7 @@
 import { AddNote } from "../apps/note/cmps/AddNote.jsx"
 import { NoteHeader } from "../apps/note/cmps/NoteHeader.jsx"
 import { NoteList } from "../apps/note/cmps/NoteList.jsx"
+import { NoteModal } from "../apps/note/cmps/NoteModal.jsx"
 import { SearchNote } from "../apps/note/cmps/SearchNote.jsx"
 import { noteService } from "../apps/note/services/note.service.js"
 
@@ -11,6 +12,7 @@ export class NoteApp extends React.Component {
         pinnedNotes: null,
         unPinnedNotes: null,
         filterChar: null,
+        isModal: false,
     }
 
 
@@ -24,6 +26,10 @@ export class NoteApp extends React.Component {
         })
     }
 
+
+    toggleModal = () => {
+        this.setState({isModal: !this.state.isModal});
+      }
 
     updateNoteContent = (noteId, noteType, txt) => {
         noteService.updateNoteContent(noteId, noteType, txt)
@@ -83,7 +89,7 @@ export class NoteApp extends React.Component {
     }
 
     render() {
-        const { pinnedNotes,unPinnedNotes } = this.state;
+        const { pinnedNotes, unPinnedNotes, isModal } = this.state;        
         
         if (!pinnedNotes  || !unPinnedNotes) return <h1>no notes</h1>
         return (
@@ -95,6 +101,7 @@ export class NoteApp extends React.Component {
                 <AddNote addNote={this.addNote} />
                 <span className="sub-title">pinned notes:</span>
                     <NoteList
+                    toggleModal={this.toggleModal}
                     duplicateNote={this.duplicateNote}
                     updateTodoContent={this.updateTodoContent}
                     removeTodo={this.removeTodo}
@@ -108,6 +115,7 @@ export class NoteApp extends React.Component {
                 
                 <span className="sub-title">other notes:</span>
                     <NoteList
+                    toggleModal={this.toggleModal}
                     duplicateNote={this.duplicateNote}
                     updateTodoContent={this.updateTodoContent}
                     removeTodo={this.removeTodo}
@@ -120,6 +128,8 @@ export class NoteApp extends React.Component {
                     notes={unPinnedNotes} />
 
                 </div>
+
+                {(isModal) && <NoteModal toggleModal={this.toggleModal} txt={'Note Removed!'} />}
             </section>
         )
     }

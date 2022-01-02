@@ -1,0 +1,28 @@
+.note-modal {
+    font-family: Roboto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3%;
+    right: 5%;
+    min-height: 50px;
+    background-color: lightgray;
+    color: black;
+    padding: 8px 24px;
+    border-radius: 10px;
+    /* color: white; */
+    gap: 20px;
+    box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
+    z-index: 10;
+}
+
+.note-modal button {
+    background-color: transparent;
+    color: black;
+    border: none;
+}
+
+.note-modal button:hover {
+    cursor: pointer;
+}

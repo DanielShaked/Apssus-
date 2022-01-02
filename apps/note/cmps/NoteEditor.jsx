@@ -9,6 +9,7 @@ export class NoteEditor extends React.Component {
     
     onRemoveNote = () => {
         this.props.removeNote(this.props.note.id);
+        this.props.toggleModal();
         // TODO: busService user-msg
     }
     
@@ -24,7 +25,6 @@ export class NoteEditor extends React.Component {
     render() {
         const { note, changeBgColor} = this.props;
         const { isColorPickerOpen } = this.state;
-        console.log('isColorPickerOpen:', isColorPickerOpen);
         
         return(
             <section className="note-editor">
