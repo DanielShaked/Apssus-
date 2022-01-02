@@ -1,5 +1,4 @@
 .note-modal {
-    font-family: Roboto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,22 +6,23 @@
     bottom: 3%;
     right: 5%;
     min-height: 50px;
-    background-color: lightgray;
-    color: black;
+    background-color: #202124;
+    color: #fff;
     padding: 8px 24px;
-    border-radius: 10px;
-    /* color: white; */
+    border-radius: 4px;
+    color: white;
     gap: 20px;
     box-shadow: 0 1px 3px 0 rgb(60 64 67 / 30%), 0 4px 8px 3px rgb(60 64 67 / 15%);
     z-index: 10;
 }
 
 .note-modal button {
-    background-color: transparent;
-    color: black;
+    background: rgb(43, 43, 43);
+    color: white;
     border: none;
 }
 
 .note-modal button:hover {
+    background-color: rgba(255, 255, 255, 0.247);
     cursor: pointer;
 }
