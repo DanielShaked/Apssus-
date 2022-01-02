@@ -23,7 +23,12 @@
 .header .fa-th-large {
   cursor: pointer;
   font-size: 2rem;
-  color: gray;
+  color: #282828;
+  padding: 0.3em;
+}
+.header .fa-th-large:hover {
+  background-color: rgb(224, 224, 224);
+  border-radius: 50%;
 }
 
 .logo-container .logo-txt {
@@ -31,6 +36,7 @@
   font-family: marvel;
   font-size: 3rem;
   transition: 0.5s ease-in-out;
+  color: #282828;
 }
 
 .menu-container {

@@ -16,8 +16,8 @@ export function HeaderMenu({onToggleMenu}) {
             width="40"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 49.4 512 399.4200000000001">
-            <g fill="none" fill-rule="evenodd">
-              <g fill-rule="nonzero">
+            <g fill="none" fillRule="evenodd">
+              <g fillRule="nonzero">
                 <path
                   d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"
                   fill="#4285f4"
@@ -35,7 +35,7 @@ export function HeaderMenu({onToggleMenu}) {
               <path
                 d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"
                 fill="#c5221f"
-                fill-rule="nonzero"
+                fillRule="nonzero"
               />
             </g>
           </svg>
