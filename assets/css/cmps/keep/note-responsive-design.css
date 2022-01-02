@@ -36,6 +36,7 @@
   }
 
 
+
 }
 
 @media (min-width: 700px) {
@@ -113,6 +114,10 @@
   @media (min-width: 1050px) {
     .main-layout {
       width: 980px;
+    }
+
+    .note-editor {
+      opacity: 0;
     }
 
     .note-list {

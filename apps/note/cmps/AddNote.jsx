@@ -4,7 +4,7 @@ export class AddNote extends React.Component {
     state = {
         value: '',
         type: 'note-txt',
-        placeholder: 'Enter new note here...',        
+        placeholder: 'Enter new note here',        
     }
     
     

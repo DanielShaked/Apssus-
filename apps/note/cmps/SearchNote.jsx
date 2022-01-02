@@ -26,7 +26,7 @@ export class SearchNote extends React.Component{
             <div className="search-container">
                     <img src="./././assets/img/search.svg" />
                     <input
-                        placeholder="Search note..."
+                        placeholder="Search note"
                         type="search"
                         name="value"
                         value={value}

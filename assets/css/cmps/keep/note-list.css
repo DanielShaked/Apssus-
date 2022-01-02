@@ -4,11 +4,6 @@
     columns: 2;
     column-gap: 30px;
     align-items: center;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
 }
 
 iframe {
