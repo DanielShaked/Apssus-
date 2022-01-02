@@ -78,7 +78,6 @@ export class NoteApp extends React.Component {
     }
 
     onSetFilter = (value) => {
-        console.log('value-fronNoteApp:', value);
         
         this.setState({filterChar:value}, this.loadNotes)
     }

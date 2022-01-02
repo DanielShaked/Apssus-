@@ -16,6 +16,7 @@
 }
 
 .search-container img {
+    padding-left: 5px;
     position: absolute;
     top: 25%;
 }
