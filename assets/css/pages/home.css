@@ -182,6 +182,12 @@
   border: 1px solid rgb(224, 224, 224);
   padding: 10px;
   font-family: Roboto;
+
+  transition: border 0.5s;
+}
+
+.about:hover {
+  border: 1px solid #1a73e8;
 }
 
 .about img {
