@@ -23,7 +23,8 @@ function query(criteria = null) {
   }
 
   let {txt} = criteria;
-  txt.toLowerCase();
+  txt = txt.toLowerCase();
+
   let filteredByTxtEmails = gEmails.filter(mail => {
     return (
       mail.subject.toLowerCase().includes(txt) ||
