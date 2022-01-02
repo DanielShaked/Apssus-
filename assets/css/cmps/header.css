@@ -6,7 +6,6 @@
 
 .header-container {
   border-bottom: 1px solid lightgray;
-
 }
 
 .header .fa-th-large {
@@ -19,15 +18,18 @@
   cursor: pointer;
   font-family: lato;
   font-size: 1.5rem;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-
 
 .menu-container {
   display: flex;
   gap: 15px;
 }
 
+.menu-item p {
+  font-family: Roboto;
+  color: #282828;
+}
 /* .main-nav ul>*:not(:last-child) {
   margin-inline-end: 1rem;
 } */

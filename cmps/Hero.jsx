@@ -5,7 +5,7 @@ export function Hero() {
     <div className="hero-container main-layout">
       <div className="hero-left">
         <div className="hero-txt">
-          <p>Appsus assistance to simplify your life.</p>
+          <p>Appsus helps to simplify your life.</p>
         </div>
         <a href="#cards">
           <div className="cta-btn">Get Started</div>
