@@ -9,6 +9,12 @@ export function HeaderMenu({onToggleMenu}) {
           <p>Keep</p>
         </div>
       </NavLink>
+      <NavLink to="/book">
+        <div className="menu-item" onClick={() => onToggleMenu()}>
+          <img width={40} height={40} src="./assets/img/books.png" />
+          <p>Books</p>
+        </div>
+      </NavLink>
       <NavLink to="/mail">
         <div className="menu-item" onClick={() => onToggleMenu()}>
           <svg

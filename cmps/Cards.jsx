@@ -1,6 +1,7 @@
 import {} from '../assets/img/gmail.';
 import {GmailSvg} from './GmailSvg.jsx';
 import {KeepLogo} from './KeepLogo.jsx';
+import {BookLogo} from './BookLogo.jsx';
 
 const {Link} = ReactRouterDOM;
 
@@ -33,6 +34,14 @@ export function Cards() {
           <h3>Appsus keep</h3>
           <p>Capture what's on your mind. Add notes, lists and photos to Appsus Keep.</p>
           <Link to="/note">
+            <div className="card-btn">Try Me</div>
+          </Link>
+        </div>
+        <div className="card">
+          <BookLogo />
+          <h3>Appsus books</h3>
+          <p>Appsus Books lets you lose yourself in the best books right on your device.</p>
+          <Link to="/book">
             <div className="card-btn">Try Me</div>
           </Link>
         </div>
