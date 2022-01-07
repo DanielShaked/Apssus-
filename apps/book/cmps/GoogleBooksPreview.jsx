@@ -1,4 +1,4 @@
-export function GoogleBooksPreview({book, onAddBook}) {
+export function GoogleBooksPreview({book, onAddBook, onClearForm}) {
   return (
     <li className="google-book-preview">
       {book.volumeInfo.title}
@@ -6,6 +6,7 @@ export function GoogleBooksPreview({book, onAddBook}) {
         className="fas fa-book-medical google-book-add"
         onClick={() => {
           onAddBook(book);
+          onClearForm();
         }}></i>
     </li>
   );

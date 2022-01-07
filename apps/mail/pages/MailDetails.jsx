@@ -1,5 +1,4 @@
 import {mailService} from '../services/mail.service.js';
-import {utilService} from '../../../services/util.service.js';
 import {Loader} from '../../../cmps/Loader.jsx';
 
 export class MailDetails extends React.Component {
@@ -27,7 +26,7 @@ export class MailDetails extends React.Component {
   render() {
     const {mail} = this.state;
     if (!mail) return <Loader />;
-    const {from, to, subject, sentAt, body} = this.state.mail;
+    const {from, to, subject, body} = this.state.mail;
     return (
       <section className="mail-details main-layout">
         <div className="mail-details-actions flex">

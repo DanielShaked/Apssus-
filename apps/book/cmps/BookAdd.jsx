@@ -36,12 +36,17 @@ export class BookAdd extends React.Component {
     });
   };
 
+  onClearForm = () => {
+    this.setState(prevState => ({...prevState, bookName: ''}));
+  };
+
   render() {
     const {bookName, booksToShow} = this.state;
     return (
       <div className="add-book flex">
+        <div className="add-book-title">Add New Book: </div>
+
         <form>
-          <label htmlFor="add-book">Add New Book: </label>
           <input
             type="text"
             id="add-book"
@@ -50,7 +55,9 @@ export class BookAdd extends React.Component {
             placeholder="Search By Name..."
           />
         </form>
-        {booksToShow && bookName && <AddBookList onAddBook={this.onAddBook} books={booksToShow} />}
+        {booksToShow && bookName && (
+          <AddBookList onAddBook={this.onAddBook} books={booksToShow} onClearForm={this.onClearForm} />
+        )}
       </div>
     );
   }

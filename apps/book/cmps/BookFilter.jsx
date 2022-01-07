@@ -36,6 +36,7 @@ export class BookFilter extends React.Component {
     } = this.state;
     return (
       <form className="book-filter" onSubmit={this.onSubmitFilter}>
+        <div className="filter-title">Search: </div>
         <input type="text" name="name" value={name} placeholder="Book Name" onChange={this.handleChange} />
 
         <input

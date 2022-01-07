@@ -1,8 +1,9 @@
 .book-preview {
-  background-color: #1d3557;
+  background-color: #f3f3f3;
   padding: 1rem;
-  color: #f1faee;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  color: #282828;
+  box-shadow: rgb(14 30 37 / 0%) 0px 2px 4px 0px, rgb(14 30 37 / 26%) 0px 2px 5px 0px;
+  border: 1px solid lightgray;
 }
 
 .book-preview-img {
@@ -23,7 +24,7 @@
 }
 
 .book-preview:hover {
-  background-color: #e63946;
+  background-color: #ffeeca;
   cursor: pointer;
   transform: scale(1.04);
 }

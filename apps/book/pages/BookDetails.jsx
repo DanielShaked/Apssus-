@@ -12,9 +12,7 @@ export class BookDetails extends React.Component {
   }
 
   loadBook = () => {
-    console.log('this.props.math.params', this.props.match.params);
     const {bookId} = this.props.match.params;
-    console.log('bookId in BookDetails', bookId);
     bookService.getBookById(bookId).then(book => {
       // bookId is undefined send user back to home page
       if (!book) return this.props.history.push('/');
@@ -72,11 +70,7 @@ export class BookDetails extends React.Component {
             {this.renderRow('Language', `${language.toUpperCase()}`)}
             {this.renderRow('Publish Date', `${publishedDate}`)}
             {this.renderRow('Reading Duration', `${readingDuration}`)}
-            {listPrice.isOnSale && (
-              <p>
-                <span className="sale">On Sale !</span>
-              </p>
-            )}
+            {listPrice.isOnSale && <img src="../../../assets/img/sale.png" />}
             <LongTxt text={description} isLongTxtShown={this.state.isLongTxtShown} />
 
             <div className="book-details-btns">

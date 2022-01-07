@@ -4,12 +4,14 @@
 }
 
 .book-details-content {
-  background-color: #f1faee;
+  background-color: #ffeeca;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   font-size: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid lightgrey;
+  margin-top: 20px;
 }
 
 .book-details-text > p,
@@ -19,24 +21,33 @@ h2 {
 }
 
 .book-details-text {
+  max-width: 560px;
+  min-height: 478.13px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+.book-details-content .book-details-text img {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  width: 75px;
 }
 
 .book-details-img {
-  max-width: 320px;
+  min-height: 478.13px;
 }
 
 .book-details-title {
   font-size: 2rem;
-  color: #457b9d;
+  color: #282828;
   text-transform: capitalize;
 }
 
 .book-detials-subtitle {
   font-size: 1.3rem;
-  color: #457b9d;
+  color: #282828;
 }
 
 .book-details-text .btn {
@@ -45,7 +56,7 @@ h2 {
   min-height: 2rem;
   border: none;
   outline: 0;
-  background-color: #1d3557;
+  background-color: #434656;
   color: #f1faee;
   border-radius: 5px;
   font-size: 1rem;
@@ -54,20 +65,12 @@ h2 {
 }
 .book-details-text .btn:hover {
   cursor: pointer;
-  background-color: #3b5983;
+  background-color: #434656;
 }
 
 .book-details-btns {
   display: flex;
   gap: 10px;
-}
-
-.red-price {
-  color: #e63946;
-}
-
-.green-price {
-  color: green;
 }
 
 .sale {

@@ -46,6 +46,9 @@ export class MailPreview extends React.Component {
     return (
       <Link to={`mail/${mail.id}`}>
         <section className={`mail-preview ${isRead ? 'read' : 'unread'}`}>
+          <i
+            onClick={this.onToggleStar}
+            className={`${isStarred ? 'active-star' : ''} mail-preview-star fas fa-star`}></i>
           <h3 className="mail-preview-from">{mail.from}</h3>
 
           <div className="mail-preview-subject-container">
@@ -60,10 +63,6 @@ export class MailPreview extends React.Component {
             <div className="actions-btns flex">
               <div className="btns-hover">
                 {isReadIcon}
-
-                <i
-                  onClick={this.onToggleStar}
-                  className={`${isStarred ? 'active-star' : ''} mail-preview-star fas fa-star`}></i>
 
                 <i onClick={this.onDeleteMail} className="mail-preview-delete fas fa-trash"></i>
               </div>
